@@ -1,0 +1,9 @@
+The automated Bedrock evaluation completed successfully with a Builtin.Correctness score of 0.75 across four test cases.
+
+The evaluation shows that the customer-support agent generally performs the required routing and response behavior correctly. Manual testing also confirmed that the bug-report workflow can collect missing information across multiple turns before calling the bug-report tool, and that a successfully created bug report is stored in DynamoDB with its returned ticket ID.
+
+The agent also successfully answered a supported delivery question using information from the provided FAQ and avoided inventing a student-discount policy when the FAQ did not contain that information.
+
+The 0.75 correctness score indicates that there is still room for improvement. During manual testing, some responses exposed internal route labels such as "OTHER_REQUEST", and the out-of-scope response did not always use the FAQ-supported human-support contact method. These behaviors could be improved by strengthening the response-format and handoff instructions in the system prompt and adding additional automated tests for route-label leakage and human-support redirection.
+
+Overall, the evaluation demonstrates that the core routing, FAQ grounding, and bug-report workflow are functional, while highlighting specific response-format and handoff behaviors that could be refined in a future iteration.

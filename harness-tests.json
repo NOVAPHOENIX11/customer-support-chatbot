@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "id": "bug-report-missing-details",
+      "prompt": "The cart page becomes blank whenever I remove an item.",
+      "expected": "The assistant recognizes this as a bug report, does not call the bug-report tool because required information is missing, and asks one focused follow-up question to collect missing reproduction steps."
+    },
+    {
+      "id": "faq-delivery-time",
+      "prompt": "How long does delivery take?",
+      "expected": "The assistant answers using the FAQ: estimated delivery times are shown at checkout and in the shipping confirmation email, and processing typically takes 1-2 business days before dispatch."
+    },
+    {
+      "id": "faq-unsupported-student-discount",
+      "prompt": "Do you offer student discounts?",
+      "expected": "The assistant does not invent a student discount policy. It explains that the available support information does not confirm this and directs the customer to support using FAQ-supported contact methods."
+    },
+    {
+      "id": "other-request-programming",
+      "prompt": "Can you help me write a Python program?",
+      "expected": "The assistant recognizes that this request is outside online-shop customer support, does not answer the programming question, and politely redirects the customer."
+    }
+  ]
+}
